@@ -22,7 +22,7 @@ body {
 .container {
   width: 350px;
   height: 250px;
-  background-color: #fff;
+  background-color: rgb(244, 244, 244);
   box-shadow: 0 3px 3px 5px rgba(0, 0, 0, 0.149);
   border-radius: 3px;
   padding: 1rem;
@@ -30,8 +30,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  transform: rotateY(360deg);
   transition: transform 0.5s ease-out;
+  position: absolute;
 }
 
 .container button {
@@ -43,6 +43,10 @@ body {
   border-radius: 2px;
   box-shadow: 0 1px 1px 3px rgba(0, 0, 0, 0.149);
 }
+.backBtn {
+  transform: translateY(0.7rem);
+}
+
 .feedback {
   display: flex;
   justify-content: space-around;
@@ -53,6 +57,7 @@ body {
   padding: 0.2rem;
   width: 25%;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .icon span {
@@ -62,4 +67,12 @@ body {
 .icon.slected {
   border: 2px solid rgb(255, 255, 255);
   box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.302);
+  background-color: #fff;
+}
+
+.hide {
+  opacity: 0;
+  transition: transform 0.3s ease-out;
+  transform: rotateY(180deg);
+  z-index: -1;
 }
